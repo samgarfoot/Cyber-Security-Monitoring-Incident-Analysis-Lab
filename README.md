@@ -33,8 +33,9 @@ This environment is designed to replicate the type of work performed in Security
 
 The project is divided into multiple blue team scenarios, each simulating a real-world security incident.
 
-### Scenario 1: Brute Force Authentication Detection
-- Simulated repeated failed login attempts from an external source
+### [Scenario 1 : Brute Force Authentication Detection](https://github.com/samgarfoot/Cyber-Security-Monitoring-Incident-Analysis-Lab/tree/main/1-Bruteforce)
+
+- Simulated repeated failed login attempts from an Kali Linux VM.
 - Analysis of Windows Event ID 4625 logs
 - Identification of source IP, targeted account, and attack patterns
 - Detection using Splunk queries
