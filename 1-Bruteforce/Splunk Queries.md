@@ -2,6 +2,18 @@
 
 ## Failed Logon Analysis
 
+### Investigation Approach
+
+This investigation followed a pivot-based methodology:
+
+1. Identify failed authentication activity
+2. Review most recent events for anomalies
+3. Isolate suspicious source IP address
+4. Pivot analysis based on attacker IP
+5. Expand scope to identify additional activity
+
+---
+
 ### Step 1 — Find most recent activity (timeline view)
 
 ```spl
