@@ -2,7 +2,7 @@
 
 ## Failed Logon Analysis
 
-### STEP 1 — Find most recent activity (timeline view)
+### Step 1 — Find most recent activity (timeline view)
 
 ```spl
 index=* EventCode=4625
@@ -15,10 +15,10 @@ Purpose:
 
 ---
 
-### STEP 2 — Identify suspicious IP manually
+### Step 2 — Identify suspicious IP manually
 
 I noticed repeated entries from:
-192.168.x.x (Kali VM IP)
+192.168.x.x (My Kali VM IP)
 
 ---
 
