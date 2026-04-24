@@ -18,6 +18,7 @@ Purpose:
 ### Step 2 — Identify suspicious IP manually
 
 I noticed repeated entries from:
+
 192.168.x.x (My Kali VM IP)
 
 ---
