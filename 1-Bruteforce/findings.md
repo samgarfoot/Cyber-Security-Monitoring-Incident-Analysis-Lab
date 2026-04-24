@@ -28,18 +28,6 @@ The primary event type used for detection was:
 
 ---
 
-## Splunk Investigation Queries
-
-### Failed Logon Analysis
-
-```spl
-index=* EventCode=4625
-| stats count by Account_Name Source_Network_Address
-| sort - count
-```
-
----
-
 ## Findings
 
 The investigation identified the following:
