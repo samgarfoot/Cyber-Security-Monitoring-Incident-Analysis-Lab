@@ -51,10 +51,3 @@ The project is divided into multiple blue team scenarios, each simulating a real
 - Analysis using Windows logs and Splunk correlation
 
 ---
-
-## Example Investigation Queries
-
-```spl
-index=* EventCode=4625
-| stats count by Account_Name Source_Network_Address
-| sort - count
