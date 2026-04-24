@@ -63,8 +63,8 @@ These repeated login attempts are consistent with automated credential guessing 
 
 ![Timeline View](Evidence/03_failed_logons_4625.png)
 
-Splunk detection of multiple failed authentication attempts. Event ID 4625 indicates unsuccessful login attempts. 
-Events sorted by time to identify burst activity and detect unusual login patterns.
+Splunk detection of multiple failed authentication attempts under Event ID 4625. 
+Events sorted by time to identify burst activity and detect unusual login patterns withing a very short timeframe.
 
 ---
 
