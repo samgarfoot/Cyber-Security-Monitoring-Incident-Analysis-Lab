@@ -20,10 +20,7 @@ This investigation followed a pivot-based methodology:
 index=* EventCode=4625
 | sort - _time
 ```
-Purpose:
-- See latest events first
-- Identify “something happening right now”
-- Spot unusual IPs quickly
+This query was used to review the most recent failed logon attempts in order to identify any unusual or suspicious authentication activity.
 
 ---
 
@@ -43,21 +40,30 @@ index=* EventCode=4625 Source_Network_Address="192.168.x.x"
 | sort - _time
 ```
 
-This gave me: 
-- Full attack timeline
-- Targeted accounts
-- Frequency of attempts
-- Behaviour pattern
+This query was used to isolate all failed authentication attempts from the attacker IP.
+
+Findings:
+- Full attack timeline reconstructed
+- Targeted account identified
+- High-frequency authentication failures observed
+- Behaviour consistent with brute force activity
 
 ---
 
-## STEP 4 — Expand scope
+### STEP 4 — Expand scope
 
 ```spl
 index=* Source_Network_Address="192.168.x.x"
 | stats count by EventCode
 ```
 
-Purpose:
-- See if attacker did anything else
-- Not just logins
+This query was used to determine whether the attacker IP generated any additional types of security events beyond failed authentication attempts.
+
+---
+
+### Summary
+The investigation confirmed that a single source IP (Kali Linux VM) generated repeated failed authentication attempts against a Windows user account. The behaviour observed is consistent with a brute force attack pattern.
+
+No successful authentication events were observed during the investigation period.
+
+
