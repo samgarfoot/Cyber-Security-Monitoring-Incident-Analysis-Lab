@@ -39,6 +39,43 @@ The investigation identified the following:
 
 ---
 
+## Evidence
+
+### Figure 1 — Reconnaissance Activity from Kali Linux VM
+
+
+![Kali Nmap Scan](Evidence/01_nmap_scan.png)
+
+This screenshot shows nmap scan to detect for open ports within the Windows VM.
+
+---
+
+### Figure 2 — Brute Force Attempts
+
+![Brute Force](Evidence/02_Brute_Force_attempt.png)
+
+This screenshot shows multiple brute force authentication attempts originating from the Kali Linux VM targeting the Windows system. 
+These repeated login attempts are consistent with automated credential guessing behaviour.
+
+---
+
+### Figure 3 — Failed Logon Events (Event ID 4625)
+
+![Timeline View](Evidence/03_failed_logons_4625.png)
+
+Splunk detection of multiple failed authentication attempts. Event ID 4625 indicates unsuccessful login attempts. 
+Events sorted by time to identify burst activity and detect unusual login patterns.
+
+---
+
+### Figure 4 — Pivot Analysis on Source IP Address
+
+![IP Pivot](Evidence/04_ip_pivot.png)
+
+Filtered Splunk results showing all activity from the suspicious Kali Linux IP address.
+
+---
+
 ## Evidence Summary
 The following evidence supports the conclusion of a brute force authentication attempt:
 - Event Type: 4625 (Failed Logon)
