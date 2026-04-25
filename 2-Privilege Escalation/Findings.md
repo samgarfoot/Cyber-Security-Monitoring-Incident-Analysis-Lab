@@ -1,17 +1,33 @@
 ## Findings
 
-During this investigation, Windows Security Event Logs were analysed within Splunk to identify signs of privilege escalation activity on the target system.
+The investigation identified a sequence of security events indicating successful privilege escalation on the Windows endpoint.
 
-The following key events were identified:
+Analysis of Windows Security Event Logs within Splunk revealed the following chain of activity:
 
-- Event ID 4720: A new local user account (`attackerlab`) was created
-- Event ID 4732: The user account was added to the local Administrators group
-- Event ID 4672: A logon session with elevated privileges was detected
+1. A new local user account `attackerlab` was created (Event ID 4720)
+2. The account was subsequently added to the local Administrators group (Event ID 4732)
+3. A logon session with elevated privileges was detected (Event ID 4672)
 
-These events occurred in sequence within a short time window, indicating a deliberate attempt to escalate privileges after initial access.
+These events occurred in a short timeframe and were all associated with the same user account, indicating a coordinated attempt to escalate privileges following initial access.
 
-The account `attackerlab` was consistently present across all related events, confirming it as the subject of the activity.
+## Security Impact
 
-## Interpretation
+This activity represents a high-severity security event, as the attacker successfully elevated privileges from a standard user to an administrative level. This level of access would allow:
+- Full system control
+- Persistence mechanisms (backdoors, scheduled tasks)
+- Credential harvesting
+- Potential lateral movement within a network
 
-This behaviour is consistent with post-compromise attacker activity, where a user account is created and added to privileged groups to maintain persistence and elevate access rights on the system.
+## Analyst Interpretation
+
+The behaviour is consistent with post-compromise attacker activity, where privilege escalation is used to maintain control over the system and bypass access restrictions.
+
+## MITRE ATT&CK Mapping
+
+This scenario aligns with the following techniques from the MITRE ATT&CK framework:
+
+- T1136.001 — Create Account: Local Account (user creation via net user)
+- T1098 — Account Manipulation (adding user to Administrators group)
+- T1068 — Exploitation for Privilege Escalation (gaining elevated privileges)
+
+These techniques demonstrate common post-compromise behaviours used by attackers to maintain persistence and increase control over a system.
