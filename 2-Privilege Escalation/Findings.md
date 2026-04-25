@@ -2,7 +2,7 @@
 
 ## Overview
 
-This scenario simulates a Windows privilege escalation attack using PowerShell scripts to create a local user and elevate it to Administrator level. The activity is then analysed in Splunk using Windows Event Logs to detect and reconstruct the full attack chain from account creation to privilege escalation.
+This investigation identified a local privilege escalation attempt on a Windows system using PowerShell-based account creation and administrative group modification. The activity was detected and reconstructed using Windows Security Event Logs within Splunk.
 
 ---
 
