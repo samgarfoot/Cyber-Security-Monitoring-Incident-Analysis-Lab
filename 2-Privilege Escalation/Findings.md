@@ -20,6 +20,43 @@ These events occurred in a short timeframe and were all associated with the same
 
 ---
 
+## Evidence
+
+### Figure 1 — PowerShell User Creation
+![User Creation](Evidence/01_new_user.png)
+
+This screenshot shows a PowerShell command executed to create a new local user account named `attackerlab`.
+
+---
+
+### Figure 2 — Privilege Escalation via Administrators Group
+![Admin Privileges](Evidence/02_admin_privileges_added.png)
+
+This shows a PowerShell command adding the `attackerlab` user to the local Administrators group, granting elevated privileges.
+
+---
+
+### Figure 3 — Splunk Event ID 4720 (User Creation)
+![Event 4720](Evidence/03_Splunk_4720.png)
+
+This Splunk event confirms the creation of the new local user account `attackerlab`.
+
+---
+
+### Figure 4 — Splunk Event ID 4732 (Group Membership Change)
+![Event 4732](Evidence/04_Splunk_4732.png)
+
+This event shows the `attackerlab` user being added to the Administrators group.
+
+---
+
+### Figure 5 — Full Privilege Escalation Timeline
+![Full Timeline](Evidence/05_Splunk_Full_timeline.png)
+
+This view correlates Event IDs 4720, 4732, and 4672, reconstructing the full privilege escalation chain.
+
+---
+
 ## Security Impact
 
 This activity represents a high-severity security event, as the attacker successfully elevated privileges from a standard user to an administrative level. This level of access would allow:
