@@ -47,6 +47,12 @@ Observed Activity:
 
 This indicated that file-sharing services were exposed and reachable within the network.
 
+![nmap scan](Evidence/01_nmap_scan.png)
+
+---
+
+![SMB Enumeration](Evidence/02_SMB_enumeration.png)
+
 ---
 
 ## Network Traffic Analysis (Wireshark)
@@ -61,6 +67,12 @@ Observed traffic included:
 SMB enumeration attempts were observed but resulted in authentication denial, indicating that access control mechanisms were enforced.
 
 ---
+![Wireshark Nmap Scan](Evidence/03_wireshark_nmap_scan.png)
+
+---
+![Wireshark SMB](Evidence/04_Wireshark_SMB_445.png)
+
+---
 
 ## Endpoint Telemetry (Sysmon)
 
@@ -71,6 +83,9 @@ Key observation:
 - Traffic associated with external scanning attempts was visible at the endpoint level
 
 Although specific port-level correlation was limited in Splunk, Sysmon confirmed that network events were being logged successfully.
+
+---
+![Sysmon](Evidence/05_Sysmon_Event3.png)
 
 ---
 
@@ -86,6 +101,15 @@ Event timeline reconstruction showed:
 - ICMP traffic (ping activity)
 - TCP connection attempts associated with scanning behaviour
 - SMB-related connection attempts (port 445 exposure)
+
+---
+![Splunk IP Search](Evidence/06_Splunk_IP_search.png)
+
+---
+![Splunk Desc](Evidence/07_Splunk_Full_desc.png)
+
+---
+![Splunk Bottom Desc](Evidence/08_Splunk_bottom_desc.png)
 
 ---
 
