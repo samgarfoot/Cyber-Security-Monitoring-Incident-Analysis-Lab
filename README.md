@@ -26,6 +26,7 @@ This environment is designed to replicate the type of work performed in Security
 - Windows 11 Virtual Machine (Target Environment)
 - Kali Linux Virtual Machine (Attack Simulation)
 - Splunk Enterprise (Log ingestion and analysis)
+- Powershell
 
 ---
 
@@ -40,7 +41,7 @@ The project is divided into multiple blue team scenarios, each simulating a real
 - Identification of source IP, targeted account, and attack patterns
 - Detection using Splunk queries
 
-### ### [Scenario 2: Privilege Escalation via Local Account Creation](2-Privilege%20Escalation/Findings.md)
+### [Scenario 2: Privilege Escalation via Local Account Creation](2-Privilege%20Escalation/Findings.md)
 - Simulated creation of a new local administrator account
 - Investigation of Event ID 4720 and 4732
 - Analysis of privilege escalation behaviour
