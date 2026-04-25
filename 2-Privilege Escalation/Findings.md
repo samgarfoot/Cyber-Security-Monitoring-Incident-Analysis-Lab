@@ -42,6 +42,14 @@ These techniques demonstrate common post-compromise behaviours used by attackers
 
 ---
 
+## Executive Summary
+
+This investigation analysed Windows Security Event Logs within Splunk to detect and reconstruct a privilege escalation attempt on the target system.
+
+The analysis identified the creation of a new local user account, followed by its addition to the local Administrators group, resulting in elevated system privileges.
+
+---
+
 ## Conclusion
 
 This investigation successfully demonstrated how Windows Event Logs can be used to detect and reconstruct privilege escalation activity.
