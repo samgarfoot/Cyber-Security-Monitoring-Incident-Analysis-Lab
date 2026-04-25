@@ -40,7 +40,7 @@ The project is divided into multiple blue team scenarios, each simulating a real
 - Identification of source IP, targeted account, and attack patterns
 - Detection using Splunk queries
 
-### Scenario 2: Privilege Escalation via Local Account Creation
+### [Scenario 2: Privilege Escalation via Local Account Creation](2-PrivilegeEscalation/Findings.md)
 - Simulated creation of a new local administrator account
 - Investigation of Event ID 4720 and 4732
 - Analysis of privilege escalation behaviour
