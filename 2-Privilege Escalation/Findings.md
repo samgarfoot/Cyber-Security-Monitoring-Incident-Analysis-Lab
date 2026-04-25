@@ -1,4 +1,6 @@
-## Findings
+# Scenario 2: Privilege Escalation via Local Account Creation
+
+## Overview
 
 The investigation identified a sequence of security events indicating successful privilege escalation on the Windows endpoint.
 
@@ -10,6 +12,8 @@ Analysis of Windows Security Event Logs within Splunk revealed the following cha
 
 These events occurred in a short timeframe and were all associated with the same user account, indicating a coordinated attempt to escalate privileges following initial access.
 
+---
+
 ## Security Impact
 
 This activity represents a high-severity security event, as the attacker successfully elevated privileges from a standard user to an administrative level. This level of access would allow:
@@ -18,9 +22,13 @@ This activity represents a high-severity security event, as the attacker success
 - Credential harvesting
 - Potential lateral movement within a network
 
+---
+
 ## Analyst Interpretation
 
 The behaviour is consistent with post-compromise attacker activity, where privilege escalation is used to maintain control over the system and bypass access restrictions.
+
+---
 
 ## MITRE ATT&CK Mapping
 
@@ -32,6 +40,8 @@ This scenario aligns with the following techniques from the MITRE ATT&CK framewo
 
 These techniques demonstrate common post-compromise behaviours used by attackers to maintain persistence and increase control over a system.
 
+---
+
 ## Conclusion
 
 This investigation successfully demonstrated how Windows Event Logs can be used to detect and reconstruct privilege escalation activity.
@@ -39,3 +49,5 @@ This investigation successfully demonstrated how Windows Event Logs can be used 
 By correlating Event IDs 4720, 4732, and 4672 within Splunk, the full attack chain was identified, from account creation to administrative access.
 
 This highlights the importance of monitoring authentication events and group membership changes as part of a defensive security strategy.
+
+---
