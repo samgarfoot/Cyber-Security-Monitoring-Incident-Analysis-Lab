@@ -47,7 +47,7 @@ The project is divided into multiple blue team scenarios, each simulating a real
 - Investigation of Event ID 4720, 4732 and 4672
 - Analysis of privilege escalation behaviour, mapping to MITRE ATT&CK.
 
-### Scenario 3: Suspicious PowerShell Activity
+### Scenario 3: Multi-Source Detection and Analysis of Network Reconnaissance Activity
 - Execution of potentially malicious PowerShell commands
 - Detection of encoded or unusual script behaviour
 - Analysis using Windows logs and Splunk correlation
