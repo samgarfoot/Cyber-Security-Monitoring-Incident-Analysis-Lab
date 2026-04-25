@@ -1,6 +1,6 @@
-# 🧾 Findings — Project 3
+# Findings — Reconnaissance Detection
 
-Multi-Source Detection and Analysis of Network Reconnaissance Activity
+Multi-Source Detection and Analysis of Network Reconnaissance Activity.
 
 ---
 
