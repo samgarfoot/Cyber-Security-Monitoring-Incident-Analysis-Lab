@@ -27,6 +27,7 @@ This environment is designed to replicate the type of work performed in Security
 - Kali Linux Virtual Machine (Attack Simulation)
 - Splunk Enterprise (Log ingestion and analysis)
 - Powershell
+- Sysmon
 
 ---
 
