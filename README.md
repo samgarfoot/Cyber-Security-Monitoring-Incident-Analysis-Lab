@@ -43,8 +43,8 @@ The project is divided into multiple blue team scenarios, each simulating a real
 
 ### [Scenario 2: Privilege Escalation via Local Account Creation](2-Privilege%20Escalation/Findings.md)
 - Simulated creation of a new local administrator account
-- Investigation of Event ID 4720 and 4732
-- Analysis of privilege escalation behaviour
+- Investigation of Event ID 4720, 4732 and 4672
+- Analysis of privilege escalation behaviour, mapping to MITRE ATT&CK.
 
 ### Scenario 3: Suspicious PowerShell Activity
 - Execution of potentially malicious PowerShell commands
