@@ -38,6 +38,7 @@ The objective of this investigation was to:
 ## Reconnaissance Activity (Kali Linux)
 
 Initial reconnaissance was conducted from the Kali Linux VM using ICMP and Nmap scanning techniques.
+
 Observed Activity:
 
 - ICMP echo requests successfully reached the Windows host
