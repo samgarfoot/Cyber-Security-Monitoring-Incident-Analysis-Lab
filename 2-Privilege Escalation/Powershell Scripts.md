@@ -1,5 +1,7 @@
 # Powershell Scripts
 
+These are all of the Powershell scripts that I used in this lab scenario.
+
 ## 1. Create a New Local User Account
 
 ```
