@@ -31,3 +31,11 @@ This scenario aligns with the following techniques from the MITRE ATT&CK framewo
 - T1068 — Exploitation for Privilege Escalation (gaining elevated privileges)
 
 These techniques demonstrate common post-compromise behaviours used by attackers to maintain persistence and increase control over a system.
+
+## Conclusion
+
+This investigation successfully demonstrated how Windows Event Logs can be used to detect and reconstruct privilege escalation activity.
+
+By correlating Event IDs 4720, 4732, and 4672 within Splunk, the full attack chain was identified, from account creation to administrative access.
+
+This highlights the importance of monitoring authentication events and group membership changes as part of a defensive security strategy.
