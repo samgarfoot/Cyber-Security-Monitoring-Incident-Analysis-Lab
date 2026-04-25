@@ -91,12 +91,10 @@ Event timeline reconstruction showed:
 ## MITRE ATT&CK Mapping
 
 The observed behaviour aligns with the following MITRE ATT&CK techniques:
-- T1595 – Active Scanning
-Network discovery and host identification via ping and Nmap
-- T1046 – Network Service Scanning
-Identification of open SMB service (port 445)
-- T1135 – Network Share Discovery
-Attempted SMB enumeration via service probing
+
+- [T1595 – Active Scanning](https://attack.mitre.org/techniques/T1595/) - Network discovery and host identification via ping and Nmap
+- [T1046 – Network Service Scanning](https://attack.mitre.org/techniques/T1046/) - Identification of open SMB service (port 445)
+- [T1135 – Network Share Discovery](https://attack.mitre.org/techniques/T1135/) - Attempted SMB enumeration via service probing
 
 ---
 
