@@ -26,6 +26,7 @@ This environment is designed to replicate the type of work performed in Security
 - Windows 11 Virtual Machine (Target Environment)
 - Kali Linux Virtual Machine (Attack Simulation)
 - Splunk Enterprise (Log ingestion and analysis)
+- Wireshark
 - Powershell
 - Sysmon
 
