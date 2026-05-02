@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a hands-on cybersecurity home lab focused on **security monitoring, log analysis, and incident investigation** in a Windows-based environment.
+This project is a hands-on cybersecurity home lab focused on security monitoring, log analysis, and incident investigation in a Windows-based environment.
 
 The lab simulates real-world blue team scenarios where security events are generated, collected, and analysed using industry-standard tools. The goal is to develop practical skills in detecting, investigating, and responding to potential security incidents.
 
