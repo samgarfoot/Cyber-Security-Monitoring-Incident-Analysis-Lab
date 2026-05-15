@@ -18,6 +18,9 @@ This environment is designed to replicate the type of work performed in Security
 - Understand attacker behaviour through controlled simulations
 - Improve incident response and reporting skills
 - Gain familiarity with SIEM-style analysis workflows
+- Harden the target environment against identified attack vectors using 
+industry frameworks
+
 
 ---
 
@@ -27,14 +30,19 @@ This environment is designed to replicate the type of work performed in Security
 - Kali Linux Virtual Machine (Attack Simulation)
 - Splunk Enterprise (Log ingestion and analysis)
 - Wireshark
-- Powershell
+- PowerShell
 - Sysmon
+- CIS Microsoft Windows 11 Benchmark v5.0.0
+- NIST Cybersecurity Framework v2.0
 
 ---
 
 ## Lab Structure
 
-The project is divided into multiple blue team scenarios, each simulating a real-world security incident.
+The project is divided into multiple blue team scenarios, each simulating 
+a real-world security incident. Scenario 4 represents the defensive 
+response — hardening the environment against the attack vectors identified 
+in previous scenarios.
 
 ### [Scenario 1 : Brute Force Authentication Detection](1-Bruteforce/findings.md)
 
@@ -54,5 +62,28 @@ The project is divided into multiple blue team scenarios, each simulating a real
 - Analysis of network traffic using Wireshark packet capture
 - Endpoint validation of external connections using Sysmon Event ID 3
 - SIEM-based correlation and timeline reconstruction using Splunk IP-based analysis
+
+### [Scenario 4: CIS Benchmark Audit and Hardening — Windows 11 Pro](4-CIS-Windows-Hardening/findings.md)
+
+- Conducted a structured security audit of the Windows 11 target 
+environment against the CIS Microsoft Windows 11 Benchmark v5.0.0
+- Identified non-compliant controls across password policy, audit 
+logging, firewall configuration, and legacy protocol exposure
+- Remediated 6 non-compliant controls using PowerShell and Group Policy
+- Mapped all controls to the NIST Cybersecurity Framework Protect and 
+Detect functions
+- Generated a formal hardening report documenting pre and post 
+remediation state for each control
+
+---
+
+## NIST CSF Coverage
+
+| Scenario | NIST CSF Function |
+|---|---|
+| Brute Force Detection | Detect, Respond |
+| Privilege Escalation | Detect, Respond |
+| Reconnaissance Detection | Detect, Respond |
+| CIS Hardening | Protect, Detect |
 
 ---
