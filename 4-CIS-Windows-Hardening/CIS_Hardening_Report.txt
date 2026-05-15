@@ -1,1 +1,67 @@
+=== CIS Windows 11 Hardening Report ===
+Date: 05/15/2026 17:09:23
+
+--- Password Policy ---
+Force user logoff how long after time expires?:       Never Minimum password age (days):                          1 Maximum password age (days):                          42 Minimum password length:                              14 Length of password history maintained:                24 Lockout threshold:                                    5 Lockout duration (minutes):                           15 Lockout observation window (minutes):                 15 Computer role:                                        WORKSTATION The command completed successfully. 
+
+--- Firewall Status ---
+
+Name    Enabled DefaultInboundAction DefaultOutboundAction
+----    ------- -------------------- ---------------------
+Domain     True                Block                 Allow
+Private    True                Block                 Allow
+Public     True                Block                 Allow
+
+
+
+
+--- Windows Defender ---
+
+AntivirusEnabled RealTimeProtectionEnabled BehaviorMonitorEnabled
+---------------- ------------------------- ----------------------
+            True                      True                   True
+
+
+
+
+--- Local Accounts ---
+
+Name               Enabled
+----               -------
+Admin1234             True
+Administrator        False
+DefaultAccount       False
+Guest                False
+Sam                   True
+WDAGUtilityAccount   False
+
+
+
+
+--- SMB1 Status ---
+
+FeatureName     State
+-----------     -----
+SMB1Protocol Disabled
+
+
+
+
+--- RDP Status ---
+
+fDenyTSConnections
+------------------
+                 1
+
+
+
+
+--- AutoRun Status ---
+
+NoDriveTypeAutoRun
+------------------
+               255
+
+
+
 
